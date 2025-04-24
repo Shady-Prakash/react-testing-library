@@ -2,11 +2,12 @@
 const Application = () => {
   return (
     <>
+      <h1>Job application form</h1>
+      <h2>Section 1</h2>
       <form>
         <div>
           <label htmlFor="name">Name</label>
           <input
-            name="name"
             type="text"
             id="name"
             placeholder="Fullname"
@@ -14,10 +15,10 @@ const Application = () => {
             onChange={() => {}}
           />
         </div>
-        {/* <div>
+        <div>
           <label htmlFor="bio">Bio</label>
           <textarea id="bio" />
-        </div> */}
+        </div>
         <div>
           <label htmlFor="job-location">Job location</label>
           <select id="job-location">
