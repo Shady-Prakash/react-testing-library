@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react"
 import Greet from "./greet"
-import "@testing-library/jest-dom/vitest";
 import { describe, expect, test } from "vitest";
 
 describe("Greet", () => {

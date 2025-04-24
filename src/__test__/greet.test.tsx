@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import Greet from "../components/greet/greet"
+import Greet from "../components/Greet/greet"
 import "@testing-library/jest-dom/vitest";
 import { describe, expect, it } from "vitest";
 
