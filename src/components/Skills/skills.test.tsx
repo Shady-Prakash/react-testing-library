@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import Skills from "./skills";
-import { render, screen } from "@testing-library/react";
+import { logRoles, render, screen } from "@testing-library/react";
 
 describe("Skills", () => {
   const skills = ['HTML', 'CSS', 'JavaScript'];
@@ -34,7 +34,9 @@ describe("Skills", () => {
   });
 
   test('Start learning button is eventually displayed', async () => {
-    render(<Skills skills={skills}/>);
+    const view = render(<Skills skills={skills}/>);
+    logRoles(view.container)
+    // screen.debug();
     const startLearningButton = await screen.findByRole('button', {
       name: 'Start learning'
     },
@@ -42,6 +44,7 @@ describe("Skills", () => {
       timeout: 2000
     }
   );
+  // screen.debug();
     expect(startLearningButton).toBeInTheDocument();
   })
 })
